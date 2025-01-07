@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+}
+
+body,* {
+  font-family: "Noto Serif Thai", serif;
+
+}
+
+.login-text {
+  font-family: "Exo 2", serif;
+}
+
+input.accordion-input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.accordion-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+  max-width: 100%;
+  margin:0 auto;
+}
+.accordion {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.accordion:last-child{
+  margin-bottom: 0;
+}
+.accordion-label {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 16px;
+  background: linear-gradient(to right, #3b82f6, #2563eb, #1e40af);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+}
+.accordion-label:hover {
+  background: rgba(4,57,94,1);
+}
+.accordion-label::after {
+  content: "\276F";
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.accordion-content {
+  max-height: 0;
+  padding: 0 16px;
+  color: rgba(4,57,94,1);
+  background: white;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.accordion-content p{
+  margin: 0;
+  color: rgba(4,57,94,.7);
+  font-size: 18px;
+}
+
+input.accordion-input:checked + .accordion-label::after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+input.accordion-input:checked ~ .accordion-content {
+  max-height: 100vh;
+  padding: 16px;
+}
+
+
+#owl-demo .item{
+  margin: 3px;
+}
+#owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+ul.slide_bar {
+  list-style-type: none; /* ยกเลิกการใช้จุดหรือขีดหน้า */
+  padding-left: 0; /* กำหนดให้ไม่มีระยะห่างซ้าย */
+}
+
+ul.slide_bar li {
+  position: relative; /* เพื่อให้สามารถใช้ :before ได้ */
+  padding-left: 20px; /* ระยะห่างจากขีด */
+}
+
+ul.slide_bar li::before {
+  content: "-"; /* ใส่ขีดหน้าข้อความ */
+  position: absolute;
+  left: 0; /* จัดขีดให้อยู่ซ้ายสุด */
+}
+
