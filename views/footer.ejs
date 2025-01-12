@@ -9,6 +9,12 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
+     window.onload = function() {
+      // ซ่อน loading screen
+      document.getElementById('loading-screen').style.display = 'none';
+      // แสดงเนื้อหาหลัก
+      document.getElementById('main-content').style.display = 'block';
+    };
 
     function toggleAccordion(index) {
         const content = document.getElementById(`content-${index}`);
